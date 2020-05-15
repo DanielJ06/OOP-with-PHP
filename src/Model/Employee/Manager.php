@@ -2,7 +2,9 @@
 
 namespace Alura\Bank\Model\Employee;
 
-class Manager extends Employee {
+use Alura\Bank\Model\Authenticate;
+
+class Manager extends Employee implements Authenticate {
     public function bonusCalc(): float {
         return $this->getSalary() * 2;
     }

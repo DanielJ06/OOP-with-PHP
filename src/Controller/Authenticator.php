@@ -2,11 +2,11 @@
 
 namespace Alura\Bank\Controller;
 
-use Alura\Bank\Model\Employee\Manager;
+use Alura\Bank\Model\Authenticate;
 
 class Authenticator {
-    public function tryLogin(Manager $manager, string $passwd): void {
-        if ($manager->authorized(md5($passwd))) {
+    public function tryLogin(Authenticate $authenticate, string $passwd): void {
+        if ($authenticate->authorized(md5($passwd))) {
             echo "Logged";
         } else {
             echo "Incorrect password";

@@ -2,7 +2,7 @@
 
 namespace Alura\Bank\Model;
 
-class User {
+abstract class User {
     protected $name;
     private $cpf;
 

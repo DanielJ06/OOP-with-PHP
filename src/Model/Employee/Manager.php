@@ -7,7 +7,7 @@ class Manager extends Employee {
         return $this->getSalary() * 2;
     }
 
-    public function Auth(string $passwd) {
-        return $passwd = 'a';
+    public function authorized(string $passwd): bool {
+        return $passwd === md5('a');
     }
 }

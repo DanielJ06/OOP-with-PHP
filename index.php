@@ -16,4 +16,6 @@ $firstAccount->deposit(10000);
 $firstAccount->withdraw(5);
 $firstAccount->transfer(200, $secondAccount);
 
-echo $secondAccount->getBalance();
+echo $secondAccount->getBalance() . PHP_EOL;
+
+echo $address->number = '3b';

@@ -2,6 +2,14 @@
 
 namespace Alura\Bank\Model;
 
+/**
+ * @package Alura\Bank\Model
+ * @property-read string $city
+ * @property-read string $district
+ * @property-read string $street
+ * @property-read string $number
+ */
+
 class Address {
     private $city;
     private $district;
@@ -32,5 +40,19 @@ class Address {
     public function getNumber(): string
     {
         return $this->number;
+    }
+
+    public function setNumber($value) {
+        return $this->number = $value;
+    }
+
+    public function __get($name): void {
+        $method = 'get' . ucfirst($name);
+        $this->$method();
+    }
+
+    public function __set($name, $value): void {
+        $method = 'set' . ucfirst($name);
+        $this->$method($value);
     }
 }

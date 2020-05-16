@@ -11,6 +11,8 @@ namespace Alura\Bank\Model;
  */
 
 class Address {
+    use Proprerties;
+
     private $city;
     private $district;
     private $street;
@@ -44,15 +46,5 @@ class Address {
 
     public function setNumber($value) {
         return $this->number = $value;
-    }
-
-    public function __get($name): void {
-        $method = 'get' . ucfirst($name);
-        $this->$method();
-    }
-
-    public function __set($name, $value): void {
-        $method = 'set' . ucfirst($name);
-        $this->$method($value);
     }
 }
